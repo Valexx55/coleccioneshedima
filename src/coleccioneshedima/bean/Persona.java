@@ -6,7 +6,7 @@ package coleccioneshedima.bean;
  * @author Jose
  *
  */
-public class Persona {
+public class Persona implements Comparable<Persona> {
 	
 	//TODO definir atributos, constructor y métodos de acceso
 	
@@ -52,6 +52,33 @@ public class Persona {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return this.nombre + " " + this.edad;
+	}
+
+
+	//COVENCIÓN ES ESTA
+	/**
+	 * si THIS es mayor --> devuelvo un num positivo
+	 * si THIS es menor --> devuelvo un num negativo
+	 * si son iguales --> devuelvo cero
+	 */
+	
+	@Override
+	public int compareTo(Persona persona) {
+		// TODO Auto-generated method stub
+		int resultado = 0;
+		
+/*			if (this.edad>o.edad)
+			{
+				resultado= 1;
+			} else if (this.edad<o.edad)
+			{
+				resultado = -1;
+			}*/
+			resultado = this.edad-persona.edad;
+			//resultado = this.nombre.compareTo(persona.nombre);
+			
+		
+		return resultado;
 	}
 	
 	

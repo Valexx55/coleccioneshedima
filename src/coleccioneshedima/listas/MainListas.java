@@ -1,6 +1,7 @@
 package coleccioneshedima.listas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -119,16 +120,47 @@ public class MainListas {
 	public static void main(String[] args) {
 		
 		Persona p1 = new Persona("Pablo", 22);
-		Persona p2 = new Persona("Pablo", 22);
+		//Persona p2 = new Persona("Pablo", 22);
+		Persona p3 = new Persona("Maria", 18);
+		Persona p4 = new Persona("Marta", 98);
+		Persona p5 = new Persona("Alex", 44);
+		
 		
 		
 		List<Persona> lp1 = new ArrayList<Persona>();
-		List<Persona> lp2 = new ArrayList<Persona>();
+		//List<Persona> lp2 = new ArrayList<Persona>();
 		
 		lp1.add(p1);
-		lp2.add(p2);
+		lp1.add(p3);
+		lp1.add(p4);
+		lp1.add(p5);
 		
-		List<Persona> lcomun = elementosComunes(lp1, lp2);
+		System.out.println("Lista personas " + lp1);
+		
+		Collections.shuffle(lp1);
+		
+		
+		System.out.println("Lista personas tras shuffle " + lp1);
+		
+		Collections.sort(lp1);
+		//CALLBACK -- LLAMADA POR DETRÁS
+		// CUANDO SE LLAMA UN MÉTODO DE MANERA AUTOMÁTICA
+		//ANTE DETERMINADO EVENTO 
+		
+		System.out.println("Lista personas tras sort " + lp1);
+		
+		//TODO HACED UN MÉTODO EN ESTA CLASE
+		//QUE DADA UNA LISTA, ME DEVUELVA LA LISTA
+		//DEL REVÉS
+		//Lista personas tras sort [Maria 18, Pablo 22, Alex 44, Marta 98]
+		//RESULTADO Lista personas tras sort [ Marta 98,  Alex 44, Pablo 22, Maria 18]//, Pablo 22, Alex 44, Marta 98]
+		
+		
+		
+		
+		//lp2.add(p2);
+		
+		/*List<Persona> lcomun = elementosComunes(lp1, lp2);
 		
 		if (lcomun==null|| lcomun.size() == 0)
 		{
@@ -142,6 +174,6 @@ public class MainListas {
 		}
 		
 		
-		
+	*/	
 	}
 }
