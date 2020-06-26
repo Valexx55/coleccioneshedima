@@ -6,7 +6,9 @@ package coleccioneshedima.bean;
  * @author Jose
  *
  */
-public class Persona implements Comparable<Persona> {
+public class Persona implements Comparable<Persona> //ORDEN "NATURAL"
+
+{
 	
 	//TODO definir atributos, constructor y métodos de acceso
 	
@@ -67,14 +69,14 @@ public class Persona implements Comparable<Persona> {
 		// TODO Auto-generated method stub
 		int resultado = 0;
 		
-/*			if (this.edad>o.edad)
+			if (this.edad>persona.edad)
 			{
 				resultado= 1;
-			} else if (this.edad<o.edad)
+			} else if (this.edad<persona.edad)
 			{
 				resultado = -1;
-			}*/
-			resultado = this.edad-persona.edad;
+			}
+			//resultado = this.edad-persona.edad;
 			//resultado = this.nombre.compareTo(persona.nombre);
 			
 		
