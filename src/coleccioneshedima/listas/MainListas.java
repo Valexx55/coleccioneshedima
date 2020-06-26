@@ -10,6 +10,7 @@ import org.omg.CORBA.INV_FLAG;
 
 import coleccioneshedima.bean.Alumno;
 import coleccioneshedima.bean.ComparadorPersonas;
+import coleccioneshedima.bean.ComparadorPorNombreYEdad;
 import coleccioneshedima.bean.Persona;
 
 /**
@@ -141,19 +142,25 @@ public class MainListas {
 
 	public static void main(String[] args) {
 
-		Persona p1 = new Persona("Pablo", 22);
+		Persona p1 = new Persona("Pablo", 22, "987446");
 		// Persona p2 = new Persona("Pablo", 22);
-		Persona p3 = new Persona("Maria", 18);
-		Persona p4 = new Persona("Marta", 98);
-		Persona p5 = new Persona("Alex", 44);
+		Persona p3 = new Persona("Maria", 18, "127446");
+		Persona p4 = new Persona("Marta", 98, "57446");
+		Persona p5 = new Persona("Alex", 44, "337446");
+		Persona p6 = new Persona("Jesús", 28, "287446");
+		Persona p7 = new Persona("Jesús", 30, "997446");
 
 		List<Persona> lp1 = new ArrayList<Persona>();
 		// List<Persona> lp2 = new ArrayList<Persona>();
 
+		lp1.add(p7);
+		lp1.add(p6);
 		lp1.add(p1);
 		lp1.add(p3);
 		lp1.add(p4);
 		lp1.add(p5);
+		//lp1.add(p7);
+		
 
 		//System.out.println("Lista personas " + lp1);
 
@@ -179,6 +186,13 @@ public class MainListas {
 		Collections.sort(lp1, comparador);//ORDÉNAME LA LISTA LP1, USANDO ESTE COMPARADOR
 		System.out.println("Lista personas tras sort total nombre" + lp1);
 
+		
+		Comparator<Persona> comparador2 = new ComparadorPorNombreYEdad();
+		
+		Collections.sort(lp1, comparador2);//ORDÉNAME LA LISTA LP1, USANDO ESTE COMPARADOR
+		System.out.println("Lista personas tras sort total nombre Y EDAD " + lp1);
+
+		
 		// TODO HACED UN MÉTODO EN ESTA CLASE
 		// QUE DADA UNA LISTA, ME DEVUELVA LA LISTA
 		// DEL REVÉS

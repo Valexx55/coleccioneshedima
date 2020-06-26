@@ -14,6 +14,7 @@ public class ComparadorPersonas implements Comparator<Persona>{//ORDEN "TOTAL"
 		int resultado = 0;
 		
 			resultado = persona1.getNombre().compareTo(persona2.getNombre());
+			//resultado = persona2.getNombre().compareTo(persona1.getNombre());
 
 		return resultado;
 	}

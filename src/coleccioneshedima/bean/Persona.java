@@ -14,13 +14,32 @@ public class Persona implements Comparable<Persona> //ORDEN "NATURAL"
 	
 	private String nombre;
 	private int edad;
-	
-	
-	
+	private String dni;
+		
+
+
+
+	public Persona(String nombre, int edad, String dni) {
+		super();
+		this.nombre = nombre;
+		this.edad = edad;
+		this.dni = dni;
+	}
+
+
 	public Persona(String nombre, int edad) {
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
+	}
+	
+	public String getDni() {
+		return dni;
+	}
+
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 	
 	
@@ -53,7 +72,7 @@ public class Persona implements Comparable<Persona> //ORDEN "NATURAL"
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.nombre + " " + this.edad;
+		return this.nombre + " " + this.edad + " " + this.dni;
 	}
 
 
@@ -69,14 +88,18 @@ public class Persona implements Comparable<Persona> //ORDEN "NATURAL"
 		// TODO Auto-generated method stub
 		int resultado = 0;
 		
-			if (this.edad>persona.edad)
-			{
-				resultado= 1;
-			} else if (this.edad<persona.edad)
-			{
-				resultado = -1;
-			}
-			//resultado = this.edad-persona.edad;
+//			if (this.edad>persona.edad)
+//			{
+//				resultado= 1;
+//			} else if (this.edad<persona.edad)
+//			{
+//				resultado = -1;
+//			}
+			
+			//resultado = this.edad-persona.edad;//DE MENOR A MAYOR X EDAD
+			resultado = persona.edad-this.edad;//DE MAYOR A MENOR X EDAD
+			
+			
 			//resultado = this.nombre.compareTo(persona.nombre);
 			
 		
